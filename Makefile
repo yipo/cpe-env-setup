@@ -8,7 +8,7 @@ setup.exe: 7zS.sfx 7zS-config.txt pack.7z
 pack.7z: pack
 	cd $< && 7za a ..\$@ *
 
-pack: pack/setup.bat pack/runas.vbs
+pack: pack/setup.bat
 
 
 clean:
