@@ -2,6 +2,11 @@
 CD /D %~dp0
 PATH %PATH%;%CD%\tool
 
+TITLE CPE Environment Setup v0.1
+:: Author: Yi-Pu Guo (YiPo)
+
+ECHO [START] %TIME%
+
 
 ECHO ** Visual C++ 2010 Express with .NET Framework 4
 ECHO (about 30 minutes...)
@@ -45,6 +50,9 @@ SET CF_DIR=C:\CodingFrenzy^@CPExam
 7za x cf\cf-cpe.zip -o%CF_DIR% -y > NUL
 CALL:check
 
+
+ECHO Everything goes well! :)
+ECHO [FINISH] %TIME%
 
 :quit
 PAUSE
