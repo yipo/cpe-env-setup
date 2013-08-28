@@ -1,4 +1,7 @@
 @ECHO OFF
+CD /D %~dp0
+PATH %PATH%;%CD%\tool
+
 
 ECHO ** Visual C++ 2010 Express with .NET Framework 4
 ECHO (about 30 minutes...)
