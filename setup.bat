@@ -9,6 +9,19 @@ vc2010e\vc_web.exe /q /norestart
 CALL:check
 
 
+ECHO ** MinGW
+ECHO (about 5 minutes...)
+:: Follow the instructions below, we can install MinGW in command line.
+:: http://www.mingw.org/wiki/Getting_Started#toc5
+:: The CLI installer 'mingw-get' v0.5 (beta-20120426-1) can be downloaded at:
+:: http://sourceforge.net/projects/mingw/files/Installer/mingw-get/
+
+SET MINGW_DIR=C:\MinGW
+7za x mingw\mingw-get.zip -o%MINGW_DIR% -y > NUL
+%MINGW_DIR%\bin\mingw-get install gcc g++
+CALL:check
+
+
 :quit
 PAUSE
 EXIT
