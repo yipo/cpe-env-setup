@@ -1,6 +1,10 @@
 @ECHO OFF
 CD /D %~dp0
 
+:: Borrow 7za from the pack.
+
+PATH %PATH%;%CD%\pack\tool
+
 :: Look for installed MinGW.
 
 PATH %PATH%;^
