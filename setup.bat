@@ -36,6 +36,16 @@ jdk\jdk-7u25-windows-i586.exe /s
 CALL:check
 
 
+ECHO ** Coding Frenzy
+ECHO (about 1 minutes...)
+:: It's downloaded at 2013-08-28 15:32 from:
+:: http://coding-frenzy.arping.me/CodingFrenzy@CPExam.zip
+
+SET CF_DIR=C:\CodingFrenzy^@CPExam
+7za x cf\cf-cpe.zip -o%CF_DIR% -y > NUL
+CALL:check
+
+
 :quit
 PAUSE
 EXIT
