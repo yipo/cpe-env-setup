@@ -25,6 +25,17 @@ SET MINGW_DIR=C:\MinGW
 CALL:check
 
 
+ECHO ** Java SE Development Kit 7
+ECHO (about 5 minutes...)
+:: The x86 version of JDK is choosed for compatibility.
+:: http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html
+:: Installing the JDK Silently
+:: http://docs.oracle.com/javase/7/docs/webnotes/install/windows/jdk-installation-windows.html#jdk-silent-installation
+
+jdk\jdk-7u25-windows-i586.exe /s
+CALL:check
+
+
 :quit
 PAUSE
 EXIT
