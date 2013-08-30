@@ -58,6 +58,7 @@ SET CF_DIR=C:\CodingFrenzy^@CPExam
 CALL:check
 
 
+COLOR F2
 ECHO Everything goes well! :)
 ECHO [FINISH] %TIME%
 
@@ -71,6 +72,7 @@ EXIT
 
 :check
 IF ERRORLEVEL 1 (
+	COLOR FC
 	ECHO [FAIL] %ERRORLEVEL%
 	GOTO quit
 ) ELSE (
