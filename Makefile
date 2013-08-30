@@ -5,10 +5,8 @@ setup.exe: 7zS.sfx 7zS-config.txt pack.7z
 # In order to replace ' ' to '+',
 # there is a tricky way to produce a space character.
 
-pack.7z: pack
+pack.7z: pack $(wildcard pack/*.* pack/*/*.*)
 	cd $< && 7za a ..\$@ *
-
-pack: pack/setup.bat
 
 
 clean:
