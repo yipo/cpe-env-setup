@@ -61,6 +61,9 @@ CALL:check
 ECHO Everything goes well! :)
 ECHO [FINISH] %TIME%
 
+explorer %CF_DIR%
+:: Open the folder of Coding Frenzy for you.
+
 :quit
 PAUSE
 EXIT
