@@ -8,18 +8,14 @@ TITLE CPE Environment Setup v0.2
 ECHO [START] %TIME%
 
 
-ECHO ** Visual C++ 2010 Express with .NET Framework 4
-ECHO (about 20 minutes...)
-:: http://www.microsoft.com/visualstudio/cht/downloads#d-cpp-2010-express
-:: Run 'vc_web.exe /?' to show the command-line usage.
-:: So bad, '/passive' is almost the same as '/q'.
+ECHO ** Coding Frenzy
+ECHO (about 1 minutes...)
+:: It's downloaded at 2013-08-28 15:32 from:
+:: http://coding-frenzy.arping.me/CodingFrenzy@CPExam.zip
 
-vc2010e\vc_web.exe /q /norestart
-IF ERRORLEVEL 3020 CALL:check
-IF ERRORLEVEL 3010 VERIFY > NUL && ECHO Error %ERRORLEVEL% ignored.
+SET CF_DIR=C:\CodingFrenzy^@CPExam
+7za x cf\cf-cpe.zip -o%CF_DIR% -y > NUL
 CALL:check
-:: Ignore errors of 301x (about restarting after installation).
-:: 'VERIFY > NUL' to reset ERRORLEVEL.
 
 
 ECHO ** MinGW
@@ -35,6 +31,20 @@ SET MINGW_DIR=C:\MinGW
 CALL:check
 
 
+ECHO ** Visual C++ 2010 Express with .NET Framework 4
+ECHO (about 20 minutes...)
+:: http://www.microsoft.com/visualstudio/cht/downloads#d-cpp-2010-express
+:: Run 'vc_web.exe /?' to show the command-line usage.
+:: So bad, '/passive' is almost the same as '/q'.
+
+vc2010e\vc_web.exe /q /norestart
+IF ERRORLEVEL 3020 CALL:check
+IF ERRORLEVEL 3010 VERIFY > NUL && ECHO Error %ERRORLEVEL% ignored.
+CALL:check
+:: Ignore errors of 301x (about restarting after installation).
+:: 'VERIFY > NUL' to reset ERRORLEVEL.
+
+
 ECHO ** Java SE Development Kit 7
 ECHO (about 5 minutes...)
 :: The x86 version of JDK is choosed for compatibility.
@@ -45,16 +55,6 @@ ECHO (about 5 minutes...)
 :: Run 'jdk-7u25-windows-i586.exe /?' to read the usage of parameters.
 
 jdk\jdk-7u25-windows-i586.exe /passive
-CALL:check
-
-
-ECHO ** Coding Frenzy
-ECHO (about 1 minutes...)
-:: It's downloaded at 2013-08-28 15:32 from:
-:: http://coding-frenzy.arping.me/CodingFrenzy@CPExam.zip
-
-SET CF_DIR=C:\CodingFrenzy^@CPExam
-7za x cf\cf-cpe.zip -o%CF_DIR% -y > NUL
 CALL:check
 
 
