@@ -14,7 +14,11 @@ ECHO (about 30 minutes...)
 :: Run 'vc_web.exe /?' to show the command-line usage.
 
 vc2010e\vc_web.exe /q /norestart
+IF ERRORLEVEL 3020 CALL:check
+IF ERRORLEVEL 3010 VERIFY > NUL && ECHO Error %ERRORLEVEL% ignored.
 CALL:check
+:: Ignore errors of 301x (about restarting after installation).
+:: 'VERIFY > NUL' to reset ERRORLEVEL.
 
 
 ECHO ** MinGW
