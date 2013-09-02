@@ -1,5 +1,5 @@
 ;!@Install@!UTF-8!
-Title="CPE Environment Setup v0.3"
+Title="CPE Environment Setup v0.4"
 BeginPrompt="Do you want to install the CPE Environment?"
 ExecuteFile="setup.bat"
 ;!@InstallEnd@!

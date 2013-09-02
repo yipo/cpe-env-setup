@@ -2,7 +2,7 @@
 CD /D %~dp0
 PATH %PATH%;%CD%\tool
 
-TITLE CPE Environment Setup v0.3
+TITLE CPE Environment Setup v0.4
 :: Author: Yi-Pu Guo (YiPo)
 
 ECHO [START] %TIME%
