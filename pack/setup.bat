@@ -56,6 +56,8 @@ ECHO (about 5 minutes...)
 :: Oh, no! '/passive' may somehow causes error 1603...
 
 jdk\jdk-7u25-windows-i586.exe /s
+IF ERRORLEVEL 1604 CALL:check
+IF ERRORLEVEL 1603 VERIFY > NUL && ECHO Error %ERRORLEVEL% ignored.
 CALL:check
 
 
