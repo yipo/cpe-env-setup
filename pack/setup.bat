@@ -10,7 +10,7 @@ ECHO [START] %TIME%
 
 ECHO ** Coding Frenzy
 ECHO (about 1 minutes...)
-:: It's downloaded at 2013-08-28 15:32 from:
+:: It's downloaded at 2013-09-02 15:27 from:
 :: http://coding-frenzy.arping.me/CodingFrenzy@CPExam.zip
 
 SET CF_DIR=C:\CodingFrenzy^@CPExam
