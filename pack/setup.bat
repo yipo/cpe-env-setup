@@ -2,7 +2,7 @@
 CD /D %~dp0
 PATH %PATH%;%CD%\tool
 
-TITLE CPE Environment Setup v0.4
+TITLE CPE Environment Setup v0.5
 :: Author: Yi-Pu Guo (YiPo)
 
 ECHO [START] %TIME%
@@ -10,7 +10,7 @@ ECHO [START] %TIME%
 
 ECHO ** Coding Frenzy
 ECHO (about 1 minutes...)
-:: It's downloaded at 2013-09-02 15:27 from:
+:: It's downloaded at 2013-12-03 17:51 from:
 :: http://coding-frenzy.arping.me/CodingFrenzy@CPExam.zip
 
 SET CF_DIR=C:\CodingFrenzy^@CPExam
